@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "spase mono", monospace;
+  font-weight: 700;
+  background: #c5e4e7;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 87px;
+  margin-top: 163px;
+}
+
+.tip-calculator {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 920px;
+  min-height: 481px;
+  background: #ffffff;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 45px 32px 48px 48px;
+}
+.tip-calculator .partOne {
+  width: 100%;
+  max-width: 379px;
+  min-height: 388px;
+  color: #5e7a7d;
+}
+.tip-calculator .partOne input {
+  width: 100%;
+  max-width: 379px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  padding-right: 18px;
+  text-align: right;
+  font-size: 24px;
+  background: #f3f9fa;
+  color: #00474b;
+  font-weight: bolder;
+  margin-bottom: 40px;
+  margin-top: 6px;
+  border-radius: 8px;
+}
+.tip-calculator .partOne .bill-input {
+  background-image: url(/imges/dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 16px;
+}
+.tip-calculator .partOne .tip {
+  display: grid;
+  grid-template-columns: 117px 117px 117px;
+  row-gap: 16px;
+  -webkit-column-gap: 14px;
+     -moz-column-gap: 14px;
+          column-gap: 14px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.tip-calculator .partOne .tip .tips {
+  background: #00474b;
+  color: white;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tip-calculator .partOne .tip .tips:hover {
+  background: #9fe8df;
+}
+.tip-calculator .partOne .tip .activ-tip {
+  color: #00474b;
+  background: #26c2ae;
+  font-weight: bolder;
+}
+.tip-calculator .partOne .tip #tip-custom input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 117px;
+  height: 48px;
+  font-size: 18px;
+  line-height: 36px;
+  border-radius: 8px;
+}
+.tip-calculator .partOne .people-input {
+  background-image: url(/imges/people.svg);
+  background-repeat: no-repeat;
+  background-position: 16px;
+}
+.tip-calculator .resualt {
+  width: 100%;
+  max-width: 413px;
+  min-height: 417px;
+  background: #00474b;
+  padding: 39px 21px;
+  border-radius: 12px;
+}
+.tip-calculator .resualt .tip-amount,
+.tip-calculator .resualt .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 41px;
+}
+.tip-calculator .resualt .tex h2 {
+  font-size: 16px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.tip-calculator .resualt .tex p {
+  font-size: 12px;
+  color: #7f9d9f;
+}
+.tip-calculator .resualt .amount {
+  font-size: 48px;
+  color: #26c2ae;
+  line-height: 71px;
+  letter-spacing: -1px;
+}
+.tip-calculator .resualt .resent {
+  margin-top: 122px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #00474b;
+  background: #26c2ae;
+  padding: 9px 0 9px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tip-calculator .resualt .resent:hover {
+  background: #9fe8df;
+}
+
+@media (max-width: 880px) {
+  .logo {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 50px;
+  }
+  .tip-calculator {
+    margin: 0 auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 375px;
+  }
+  .tip-calculator .partOne {
+    width: 100%;
+    max-width: 311px;
+  }
+  .tip-calculator .partOne .tip {
+    display: grid;
+    grid-template-columns: 146px 146px;
+    row-gap: 16px;
+  }
+  .tip-calculator .partOne .tip #tip-custom > .tip-custom {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 117px;
+    height: 48px;
+    font-size: 18px;
+    line-height: 36px;
+    border-radius: 8px;
+  }
+  .tip-calculator .resualt {
+    width: 100%;
+    max-width: 327px;
+    min-height: 257px;
+  }
+  .tip-calculator .resualt .tip-amount,
+  .tip-calculator .resualt .total {
+    margin-bottom: 22px;
+  }
+  .tip-calculator .resualt .amount {
+    font-size: 32px;
+  }
+  .tip-calculator .resualt .resent {
+    margin-top: 32px;
+  }
+}
