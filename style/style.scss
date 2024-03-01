@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 body {
   font-family: "spase mono", monospace;
@@ -25,7 +26,7 @@ body {
   justify-content: space-between;
   padding: 45px 32px 48px 48px;
 
-  .partOne {
+  .calculator {
     width: 100%;
     max-width: 379px;
     min-height: 388px;
@@ -45,6 +46,9 @@ body {
       margin-bottom: 40px;
       margin-top: 6px;
       border-radius: 8px;
+      &:focus {
+        border: 2px solid #26c2ae;
+      }
     }
     .bill-input {
       background-image: url(/imges/dollar.svg);
@@ -77,8 +81,7 @@ body {
         background: #26c2ae;
         font-weight: bolder;
       }
-      #tip-custom input {
-        box-sizing: border-box;
+      #tip-custom {
         width: 117px;
         height: 48px;
         font-size: 18px;
@@ -90,6 +93,9 @@ body {
       background-image: url(/imges/people.svg);
       background-repeat: no-repeat;
       background-position: 16px;
+      &:focus {
+        border: 2px solid #e17052;
+      }
     }
   }
   .resualt {
@@ -124,13 +130,19 @@ body {
       letter-spacing: -1px;
     }
     .resent {
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 333px;
+      height: 48px;
       margin-top: 122px;
-      text-align: center;
+      margin-left: 15px;
       font-size: 20px;
       font-weight: 700;
       color: #00474b;
       background: #26c2ae;
-      padding: 9px 0 9px 0;
       border-radius: 5px;
       cursor: pointer;
       &:hover {
@@ -149,22 +161,28 @@ body {
     margin: 0 auto;
     width: 100%;
     display: flex;
+    gap: 17px;
     flex-direction: column;
     max-width: 375px;
-    .partOne {
+    padding: 32px;
+    .calculator {
+      padding: 0;
       width: 100%;
       max-width: 311px;
+      margin: 0 auto;
       .tip {
+        width: 311px;
         display: grid;
         grid-template-columns: 146px 146px;
         row-gap: 16px;
         #tip-custom > .tip-custom {
           box-sizing: border-box;
-          width: 117px;
+          width: 146px;
           height: 48px;
           font-size: 18px;
           line-height: 36px;
           border-radius: 8px;
+          margin: 0;
         }
       }
     }

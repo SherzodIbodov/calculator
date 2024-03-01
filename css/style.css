@@ -4,6 +4,10 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -33,13 +37,13 @@ body {
           justify-content: space-between;
   padding: 45px 32px 48px 48px;
 }
-.tip-calculator .partOne {
+.tip-calculator .calculator {
   width: 100%;
   max-width: 379px;
   min-height: 388px;
   color: #5e7a7d;
 }
-.tip-calculator .partOne input {
+.tip-calculator .calculator input {
   width: 100%;
   max-width: 379px;
   border: none;
@@ -55,12 +59,15 @@ body {
   margin-top: 6px;
   border-radius: 8px;
 }
-.tip-calculator .partOne .bill-input {
+.tip-calculator .calculator input:focus {
+  border: 2px solid #26c2ae;
+}
+.tip-calculator .calculator .bill-input {
   background-image: url(/imges/dollar.svg);
   background-repeat: no-repeat;
   background-position: 16px;
 }
-.tip-calculator .partOne .tip {
+.tip-calculator .calculator .tip {
   display: grid;
   grid-template-columns: 117px 117px 117px;
   row-gap: 16px;
@@ -70,7 +77,7 @@ body {
   margin-top: 16px;
   margin-bottom: 32px;
 }
-.tip-calculator .partOne .tip .tips {
+.tip-calculator .calculator .tip .tips {
   background: #00474b;
   color: white;
   height: 48px;
@@ -87,27 +94,28 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
-.tip-calculator .partOne .tip .tips:hover {
+.tip-calculator .calculator .tip .tips:hover {
   background: #9fe8df;
 }
-.tip-calculator .partOne .tip .activ-tip {
+.tip-calculator .calculator .tip .activ-tip {
   color: #00474b;
   background: #26c2ae;
   font-weight: bolder;
 }
-.tip-calculator .partOne .tip #tip-custom input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.tip-calculator .calculator .tip #tip-custom {
   width: 117px;
   height: 48px;
   font-size: 18px;
   line-height: 36px;
   border-radius: 8px;
 }
-.tip-calculator .partOne .people-input {
+.tip-calculator .calculator .people-input {
   background-image: url(/imges/people.svg);
   background-repeat: no-repeat;
   background-position: 16px;
+}
+.tip-calculator .calculator .people-input:focus {
+  border: 2px solid #e17052;
 }
 .tip-calculator .resualt {
   width: 100%;
@@ -146,13 +154,25 @@ body {
   letter-spacing: -1px;
 }
 .tip-calculator .resualt .resent {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 333px;
+  height: 48px;
   margin-top: 122px;
-  text-align: center;
+  margin-left: 15px;
   font-size: 20px;
   font-weight: 700;
   color: #00474b;
   background: #26c2ae;
-  padding: 9px 0 9px 0;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -172,29 +192,35 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 17px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     max-width: 375px;
+    padding: 32px;
   }
-  .tip-calculator .partOne {
+  .tip-calculator .calculator {
+    padding: 0;
     width: 100%;
     max-width: 311px;
+    margin: 0 auto;
   }
-  .tip-calculator .partOne .tip {
+  .tip-calculator .calculator .tip {
+    width: 311px;
     display: grid;
     grid-template-columns: 146px 146px;
     row-gap: 16px;
   }
-  .tip-calculator .partOne .tip #tip-custom > .tip-custom {
+  .tip-calculator .calculator .tip #tip-custom > .tip-custom {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 117px;
+    width: 146px;
     height: 48px;
     font-size: 18px;
     line-height: 36px;
     border-radius: 8px;
+    margin: 0;
   }
   .tip-calculator .resualt {
     width: 100%;
